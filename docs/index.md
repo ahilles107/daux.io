@@ -8,6 +8,6 @@
 * Add plugin hooks into Newscoop Admin panel interface (article edit screen)
 * Easly database manage
 * Provide plugin translations
-* Add new smarty blocks/functions
+* Add new Smarty blocks/functions
 <div class="clear"></div>
 <hr/>
