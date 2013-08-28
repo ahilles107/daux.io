@@ -49,7 +49,7 @@ Plugin allows you to fully control article of the day calendar in very simple wa
 
 **Settings: (`Entity/Settings.php`)**
 - `firstDay`      - define first day of the month in calendar view
-- `earliestMonth` - define the earliest month in calendar view (ex. if you define January you won't be able to switch to months before January in same year)
+- `earliestMonth` - define the earliest month in calendar view for specified year
 - `latestMonth`   - define latest month of the current year in calendar view (similarly to an example above)
 - `showDayNames`  - show / hide day names on top of calendar view
 - `navigation`    - show / hide navigation bar
