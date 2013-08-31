@@ -18,20 +18,23 @@ pub/pub_form.php
 2. Hooks implementation:
 -------------
 Hooks are implemented in files listed in point **1.** as follows:
-````
+ex. 1:
+````php
 //ex. 1
 //newscoop/admin-files/articles/edit_html.php:
-<?php 
+<?php
     echo \Zend_Registry::get('container')->getService('newscoop.plugins.service')
         ->renderPluginHooks('newscoop_admin.interface.article.edit.sidebar', null, array(
             'article' => $articleObj, 
             'edit_mode' => $f_edit_mode
         ));
 ?>
-
+````
+ ex. 2:
+````php
 //ex. 2
 //newscoop/admin-files/pub/pub_form.php:
-<?php 
+<?php
     echo \Zend_Registry::get('container')->getService('newscoop.plugins.service')
         ->renderPluginHooks('newscoop_admin.interface.publication.edit', null, array(
             'publication' => $publicationObj

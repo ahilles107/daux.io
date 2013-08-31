@@ -1,7 +1,7 @@
 **Newscoop Plugins System** is the way to extend Newscoop functionalities.
 
 
-Thanks to our Newscoop Plugins System in an easy and fast way you will be able to install plugins designed exclusively for the Newscoop platform.
+Thanks to our Newscoop Plugins System in an easy and fast way you will be able to install plugins designed exclusively for the [Newscoop](http://www.sourcefabric.org/en/newscoop/) platform.
 
 Newscoop Plugins System documentation includes everything you need to know about, and learn how to create your own plugins or install existing ones.
 

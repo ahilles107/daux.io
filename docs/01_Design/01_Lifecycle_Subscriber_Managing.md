@@ -39,9 +39,9 @@ class LifecycleSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-            'plugin.install' => array('install', 1),
-            'plugin.update' => array('update', 1),
-            'plugin.remove' => array('remove', 1),
+            'plugin.install.newscoop_example_plugin' => array('install', 1),
+            'plugin.update.newscoop_example_plugin' => array('update', 1),
+            'plugin.remove.newscoop_example_plugin' => array('remove', 1),
         );
     }
 }
@@ -86,4 +86,4 @@ class LifecycleSubscriber implements EventSubscriberInterface
     ...
 
 ```
-In subscriber included in this plugin you can find exaple of database updating (based on doctrine entities and schema tool)
+In subscriber included in this plugin you can find example of database updating (based on doctrine entities and schema tool)

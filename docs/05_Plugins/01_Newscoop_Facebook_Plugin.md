@@ -1,6 +1,3 @@
-Newscoop Facebook Plugin
-======================
-
 Usefull services for integration Newscoop and Facebook.
 
 Facebook caches shared urls for better performance. It can cause some problems at the time we want to change title, decscripton of our article because we still have an older version of our article. This is why this plugin is designed for.
@@ -33,7 +30,7 @@ Also read more about [Lifecycle Subscriber Managing](https://wiki.sourcefabric.o
 
 Plugin has only one Entity: `Facebook.php`. After plugin is installed in your database will show up new table: `plugin_facebook_informations`.
 
-This table keep informations from Facebook about an article, such a:
+This table keeps informations from Facebook about an article, such a:
 - `article` - article ID
 - `language` - article's language ID
 - `title` - article title
@@ -101,7 +98,7 @@ If for some reasons connection to Facebook won't be possible, we will see error 
 License
 -------
 
-This bundle is under the GNU GPL v.3. See the complete license in the bundle: [LICENSE.txt](https://raw.github.com/takeit/FacebookNewscoopBundle/master/LICENSE.txt)
+This bundle is under the GNU GPL v.3. See the complete license in the bundle: [LICENSE.txt](https://raw.github.com/newscoop/plugin-NewscoopFacebook/master/LICENSE.txt)
 
 About
 -------
