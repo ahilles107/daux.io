@@ -51,6 +51,7 @@ Plugin allows you to fully control article of the day calendar in very simple wa
 - `firstDay`      - define first day of the month in calendar view
 - `earliestMonth` - define the earliest month in calendar view for specified year
 - `latestMonth`   - define latest month of the current year in calendar view (similarly to an example above)
+- `currentMonth`  - define if latest month should be the current month (if set, `latestMonth` option doesn't apply)
 - `showDayNames`  - show / hide day names on top of calendar view
 - `navigation`    - show / hide navigation bar
 - `imageWidth`    - articles image width (optional field)
@@ -63,7 +64,7 @@ Plugin allows you to fully control article of the day calendar in very simple wa
 **NOTE:** `firstDay` should be only numeric value: minimum: 1, maximum: 31. `earliestMonth` and `latestMonth` should be numeric values from 1 to 12. 
 The earliest and latest month apply only for current year which means you can not set earliest month with year below the current one.
 
-All these options (without `last_modified` and `styles`) can be overridden by the request parameters:
+All these options (without `last_modified`, `styles` and `currentMonth`) can be overridden by the request parameters:
 
 ```php
 $firstDay = $request->get('firstDay', $settings->getFirstDay());
