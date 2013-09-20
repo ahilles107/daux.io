@@ -51,7 +51,7 @@ Plugin allows you to fully control article of the day calendar in very simple wa
 - `firstDay`      - define first day of the month in calendar view
 - `earliestMonth` - define the earliest month in calendar view for specified year
 - `latestMonth`   - define latest month of the current year in calendar view (similarly to an example above)
-- `currentMonth`  - define if latest month should be the current month (if set, `latestMonth` option doesn't apply)
+- `currentMonth`  - define if the latest month should be the current month (if set, `latestMonth` option doesn't apply)
 - `showDayNames`  - show / hide day names on top of calendar view
 - `navigation`    - show / hide navigation bar
 - `imageWidth`    - articles image width (optional field)
@@ -62,16 +62,47 @@ Plugin allows you to fully control article of the day calendar in very simple wa
 - `last_modified` - date when custom CSS was last edited
 
 **NOTE:** `firstDay` should be only numeric value: minimum: 1, maximum: 31. `earliestMonth` and `latestMonth` should be numeric values from 1 to 12. 
-The earliest and latest month apply only for current year which means you can not set earliest month with year below the current one.
 
-All these options (without `last_modified`, `styles` and `currentMonth`) can be overridden by the request parameters:
+Overriding Request parameters 
+-------
+All options listed above (without `last_modified`, `styles` and `currentMonth`) can be overridden by the request parameters as given in example:
 
 ```php
 $firstDay = $request->get('firstDay', $settings->getFirstDay());
 $navigation = $request->get('navigation', $settings->getNavigation());
+...
 ```
 
-Plugin in action:
+If you wish to set your custom preferences by overriding Request parameters then you have to place your custom Javascript code with Ajax in any template file you wish calendar widget to appear.
+
+Custom Ajax code example with all parameters possible to override: 
+
+```js
+<script type="text/javascript">
+    $.ajax({
+        type: 'POST',
+        url: '/plugin/articlescalendar/widget',
+        data: {
+            'publication_numbers': '2',
+            'currentMonth': true,
+            'earliestMonth': '2012-05',
+            'latestMonth': '2013-09',
+            'navigation': true,
+            'showDayNames': true,
+            'image_width': 130
+            'image_height': 70
+        },
+        dataType: 'html',
+        success: function(msg){
+            $('.js-articles-calendar-widget-container').html(msg);
+        }
+    });
+</script>
+```
+
+When you set `currentMonth` option to `true` then the current month in calendar widget will be up to date - `latestMonth` option won't apply in that case anymore.
+
+Plugin in action
 -------
 **Article edit screen:**
 
